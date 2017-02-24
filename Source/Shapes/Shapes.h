@@ -1,0 +1,5 @@
+#include "IShape.h"
+#include "ShapePencil.h"
+#include "ShapeLine.h"
+#include "ShapeRectangle.h"
+#include "ShapeEllipse.h"

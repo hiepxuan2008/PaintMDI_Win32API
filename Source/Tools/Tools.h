@@ -1,0 +1,5 @@
+#include "ITool.h"
+#include "ToolPencil.h"
+#include "ToolLine.h"
+#include "ToolRectangle.h"
+#include "ToolEllipse.h"

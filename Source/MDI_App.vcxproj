@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A0EB79F7-E4F2-47C3-959D-4B89186A9079}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MDI_App</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Attributes\Attributes.h" />
+    <ClInclude Include="Attributes\Color.h" />
+    <ClInclude Include="Attributes\Point.h" />
+    <ClInclude Include="Attributes\Stroke.h" />
+    <ClInclude Include="BitmapChildWindowData.h" />
+    <ClInclude Include="BitmapFile.h" />
+    <ClInclude Include="MDI_App.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Shapes\IShape.h" />
+    <ClInclude Include="Shapes\ShapeEllipse.h" />
+    <ClInclude Include="Shapes\ShapeLine.h" />
+    <ClInclude Include="Shapes\ShapePencil.h" />
+    <ClInclude Include="Shapes\ShapeRectangle.h" />
+    <ClInclude Include="Shapes\Shapes.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TextChildWindowData.h" />
+    <ClInclude Include="TextFile.h" />
+    <ClInclude Include="Tools\ITool.h" />
+    <ClInclude Include="Tools\ToolEllipse.h" />
+    <ClInclude Include="Tools\ToolLine.h" />
+    <ClInclude Include="Tools\ToolPencil.h" />
+    <ClInclude Include="Tools\ToolRectangle.h" />
+    <ClInclude Include="Tools\Tools.h" />
+    <ClInclude Include="WindowController.h" />
+    <ClInclude Include="ChildWindowData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BitmapFile.cpp" />
+    <ClCompile Include="MDI_App.cpp" />
+    <ClCompile Include="Shapes\IShape.cpp" />
+    <ClCompile Include="Shapes\ShapeEllipse.cpp" />
+    <ClCompile Include="Shapes\ShapeLine.cpp" />
+    <ClCompile Include="Shapes\ShapePencil.cpp" />
+    <ClCompile Include="Shapes\ShapeRectangle.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TextChildWindowData.cpp" />
+    <ClCompile Include="TextFile.cpp" />
+    <ClCompile Include="Tools\ITool.cpp" />
+    <ClCompile Include="Tools\ToolEllipse.cpp" />
+    <ClCompile Include="Tools\ToolLine.cpp" />
+    <ClCompile Include="Tools\ToolPencil.cpp" />
+    <ClCompile Include="Tools\ToolRectangle.cpp" />
+    <ClCompile Include="BitmapChildWindowData.cpp" />
+    <ClCompile Include="WindowController.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MDI_App.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="MDI_App.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
