@@ -4,6 +4,7 @@
 + Tất cả các yêu cầu nâng cao
 + Tổ chức class để thực hiện chức năng vẽ các hình pixel, line, ellipse, rectangle,..
 + Không bị tình trạng lag dựt khi vẽ.
+
 Nếu các bạn chạy project mà báo lỗi, thì các bạn vô Properties của project -> vô C/C++ -> Precompiled Header -> Not Using Procompiled Header! Good luck!
 
 # ScreenShot:
